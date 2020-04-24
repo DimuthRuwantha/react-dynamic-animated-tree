@@ -40,11 +40,11 @@ var data = [{
           "parentNode": null,
           "childNodes": [],
           "title": "Ward 1",
-          "id": "3fd17bad-4a77-4503-b1b2-659295e314dc"
+          "id": "211"
       }
       ],
       "title": "Section 3",
-      "id": "8214f3d4-e8cf-4753-957a-46cbceabb51a"
+      "id": "21"
   }
   ],
   "title": "Department Two",
@@ -52,9 +52,8 @@ var data = [{
 }
 ]
 
-var name = "my name"
 const App = () => {
-  return <ExampleComponent text={data} />
+  return <ExampleComponent key="1" text={[...data]} />
 }
 
 export default App

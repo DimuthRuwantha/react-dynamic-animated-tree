@@ -8397,10 +8397,10 @@ react-dev-utils@^10.2.1:
   version "0.0.0"
   uid ""
 
-react-dynamic-animated-tree@^1.0.0:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-dynamic-animated-tree/-/react-dynamic-animated-tree-1.0.3.tgz#e0e32beec1f1319f4b7418328763f5722dbfb8b6"
-  integrity sha512-zShGVujAUYYPB/tG0OMqoYW/9h4Pk0fMGlyVlDzIT02UlxDIrOJlWHFfKw+B+lp+hkzDyo6PLN32biEi6EOxJQ==
+react-dynamic-animated-tree@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-dynamic-animated-tree/-/react-dynamic-animated-tree-1.0.4.tgz#be8d613505fd74eef82cdc110035de7844390ea4"
+  integrity sha512-ikug9C7JfJDUvJ6anr+h4T7k6Ch1arawb4Xn3MekWz5Jkaa3eTuXXl9EYo9TdRUF1t+wicrL7tnkkYn/1VVxdQ==
 
 react-error-overlay@^6.0.7:
   version "6.0.7"

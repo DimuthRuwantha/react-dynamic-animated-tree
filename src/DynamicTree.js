@@ -37,9 +37,9 @@ class DynamicTree extends Component {
 
         return !this.props.nodeData.length ? null : (
             <div style={{ textAlign: 'left' }}>
-                <Tree key={this.props.key} open={this.props.open} content={
+                <Tree key={this.props.id} open={this.props.open} content={
                                 <div style={{ ...styles.leaf }}>
-                                    <span key={this.props.key} value={this.props.key} className="treeNode" 
+                                    <span key={this.props.id} value={this.props.id} className="treeNode" 
                                     onClick={() => this.props.treeNodeClick({ id: this.props.id, title: this.props.content, childNodes: this.props.nodeData })} >{this.props.content}</span>
                                 </div>
                             }>
