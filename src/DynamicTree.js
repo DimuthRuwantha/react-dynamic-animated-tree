@@ -40,7 +40,10 @@ class DynamicTree extends Component {
                 <Tree key={this.props.id} open={this.props.open} content={
                                 <div style={{ ...styles.leaf }}>
                                     <span key={this.props.id} value={this.props.id} className="treeNode" 
-                                    onClick={() => this.props.treeNodeClick({ id: this.props.id, title: this.props.content, childNodes: this.props.nodeData })} >{this.props.content}</span>
+                                        onClick={this.props.treeNodeClick ? 
+                                            () => this.props.treeNodeClick({ id: this.props.id, title: this.props.content, childNodes: this.props.nodeData }): null} >
+                                                {this.props.content}
+                                    </span>
                                 </div>
                             }>
                     {this.props.nodeData.map((currentNode, index) => (
@@ -49,7 +52,7 @@ class DynamicTree extends Component {
                                 <div style={{ ...styles.leaf }}>
                                     <span key={currentNode.id} 
                                         value={currentNode.id} className="treeNode" 
-                                        onClick={(e) => { this.props.treeNodeClick(currentNode); this.handleSelected(e)}}>{currentNode.title}</span>
+                                        onClick={this.props.treeNodeClick ? () => this.props.treeNodeClick(currentNode) : null }>{currentNode.title}</span>
                                 </div>
                             } ></Tree> :
                             <DynamicTree nodeData={currentNode.childNodes}
