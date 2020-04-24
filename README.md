@@ -10,6 +10,9 @@
 npm install --save react-dynamic-animated-tree
 ```
 
+Demo
+https://codesandbox.io/s/react-dynamic-tree-git8z
+
 ## Usage
 
 ```jsx
