@@ -18,12 +18,48 @@ https://codesandbox.io/s/react-dynamic-tree-git8z
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-dynamic-animated-tree'
-import 'react-dynamic-animated-tree/dist/index.css'
+import DynamicTree  from 'react-dynamic-animated-tree'
+
+var data = [{
+  "title": "Sri Lanka",
+  "id": "1",
+  "childNodes": [{
+      "title": "Western Province",
+      "id": "11",
+      "childNodes": [{
+        "title": "Colombo District",
+        "id": "111",
+        "childNodes": [], 
+      }],
+  },
+  {
+    "title": "Central Province",
+    "id": "12",
+    "childNodes": [{
+      "parentNode": null,
+      "childNodes": [],
+      "title": "Kandy",
+      "id": "121"
+      }],
+  }],
+},
+{
+  "title": "India",
+  "id": "2",
+  "childNodes": [{
+    "title": "Maharashtra",
+    "id": "21",
+    "childNodes": [{
+      "title": "Pune",
+      "id": "211",
+      "childNodes": [],
+    }],
+  }],  
+}]
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <DynamicTree key="1" data={[...data]} />
   }
 }
 ```
