@@ -17,7 +17,6 @@ https://codesandbox.io/s/react-dynamic-tree-git8z
 
 ```jsx
 import React, { Component } from 'react'
-
 import DynamicTree  from 'react-dynamic-animated-tree'
 
 var data = [{
@@ -59,7 +58,7 @@ var data = [{
 
 class Example extends Component {
   render() {
-    return <DynamicTree key="1" data={[...data]} />
+    return <DynamicTree key="1" data={[...data]} title="Dynamic Tree" />
   }
 }
 ```

@@ -4,56 +4,44 @@ import React from 'react'
 import DynamicTree  from 'react-dynamic-animated-tree'
 
 var data = [{
-  "parentNode": null,
+  "title": "Sri Lanka",
+  "id": "1",
   "childNodes": [{
-      "parentNode": null,
+      "title": "Western Province",
+      "id": "11",
       "childNodes": [{
-          "parentNode": null,
-          "childNodes": [],
-          "title": "Ward 1",
-          "id": "111"
-      }
-      ],
-      "title": "Section 1",
-      "id": "11"
+        "title": "Colombo District",
+        "id": "111",
+        "childNodes": [], 
+      }],
   },
   {
+    "title": "Central Province",
+    "id": "12",
+    "childNodes": [{
       "parentNode": null,
-      "childNodes": [{
-          "parentNode": null,
-          "childNodes": [],
-          "title": "Ward 1",
-          "id": "121"
-      }
-      ],
-      "title": "Section 2",
-      "id": "12"
-  }
-  ],
-  "title": "Department One",
-  "id": "1"
-}, {
-  "parentNode": null,
-  "childNodes": [{
-      "parentNode": null,
-      "childNodes": [{
-          "parentNode": null,
-          "childNodes": [],
-          "title": "Ward 1",
-          "id": "211"
-      }
-      ],
-      "title": "Section 3",
-      "id": "21"
-  }
-  ],
-  "title": "Department Two",
+      "childNodes": [],
+      "title": "Kandy",
+      "id": "121"
+      }],
+  }],
+},
+{
+  "title": "India",
   "id": "2",
-}
-]
+  "childNodes": [{
+    "title": "Maharashtra",
+    "id": "21",
+    "childNodes": [{
+      "title": "Pune",
+      "id": "211",
+      "childNodes": [],
+    }],
+  }],  
+}]
 
 const App = () => {
-  return <DynamicTree key="1" data={[...data]} />
+  return <DynamicTree key="1" data={[...data]} title="Dynamic Tree" />
 }
 
 export default App

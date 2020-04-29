@@ -18,7 +18,7 @@ class DynamicTree extends React.Component {
   render() { 
     return ( 
       <div>
-    <TreeComponent key="dynamicTree" id="1" nodeData={this.props.data} content="Dynamic Tree" open
+    <TreeComponent key="dynamicTree" id="1" nodeData={this.props.data} content={this.props.title} open
       treeNodeClick={this.handleTreeNodeClick} isActive={this.state.selected} />
   </div>
      );
