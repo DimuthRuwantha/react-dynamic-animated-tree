@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-dynamic-animated-tree'
-import 'react-dynamic-animated-tree/dist/index.css'
+//import 'react-dynamic-animated-tree/dist/index.css'
+import DynamicTree  from 'react-dynamic-animated-tree'
 
 var data = [{
   "parentNode": null,
@@ -53,7 +53,7 @@ var data = [{
 ]
 
 const App = () => {
-  return <ExampleComponent key="1" text={[...data]} />
+  return <DynamicTree key="1" data={[...data]} />
 }
 
 export default App

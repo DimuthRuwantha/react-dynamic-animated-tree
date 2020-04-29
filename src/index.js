@@ -1,9 +1,28 @@
 import React from 'react'
 import styles from './styles.module.css'
-import  DynamicTree  from './DynamicTree'
+import  TreeComponent  from './TreeComponent'
 
-export const ExampleComponent = ({text}) => {
-  return <div>
-    <DynamicTree key="dynamicTree" id="1" nodeData={text} content="Dynamic Tree" open />
-  </div>
+class DynamicTree extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      selected: null
+     }
+     this.handleTreeNodeClick = this.handleTreeNodeClick.bind(this)
+  }
+
+  handleTreeNodeClick = e => {
+    this.setState({ selected: e})
 }
+
+  render() { 
+    return ( 
+      <div>
+    <TreeComponent key="dynamicTree" id="1" nodeData={this.props.data} content="Dynamic Tree" open
+      treeNodeClick={this.handleTreeNodeClick} isActive={this.state.selected} />
+  </div>
+     );
+  }
+}
+ 
+export default DynamicTree;
