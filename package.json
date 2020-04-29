@@ -4,7 +4,7 @@
   "description": "React animated tree with dynamically generated with the data",
   "author": "DimuthRuwantha",
   "license": "MIT",
-  "repository": "DimuthRuwantha/react-dynamic-animated-tree",
+  "repository": "DimuthRuwantha/create-dynamic-animated-tree",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
