@@ -9,6 +9,9 @@
 ```bash
 npm install --save react-dynamic-animated-tree
 ```
+<p align="left">
+  <img src="resources/DynamicTree.JPG" />
+</p>
 
 Demo
 https://codesandbox.io/s/react-dynamic-tree-git8z
@@ -58,7 +61,7 @@ var data = [{
 
 class Example extends Component {
   render() {
-    return <DynamicTree key="1" data={[...data]} title="Dynamic Tree" />
+    return <DynamicTree key="root" id="root" data={[...data]} title="Dynamic Tree" />
   }
 }
 ```

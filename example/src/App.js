@@ -1,6 +1,4 @@
 import React from 'react'
-
-//import 'react-dynamic-animated-tree/dist/index.css'
 import DynamicTree  from 'react-dynamic-animated-tree'
 
 var data = [{
@@ -40,8 +38,9 @@ var data = [{
   }],  
 }]
 
+
 const App = () => {
-  return <DynamicTree key="1" data={[...data]} title="Dynamic Tree" />
+  return <DynamicTree key="root" id="root" data={[...data]} title="Dynamic Tree" />
 }
 
 export default App

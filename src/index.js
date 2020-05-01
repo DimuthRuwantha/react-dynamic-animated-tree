@@ -1,6 +1,26 @@
 import React from 'react'
-import styles from './styles.module.css'
 import  TreeComponent  from './TreeComponent'
+
+const styles = {
+  leaf: {
+      cursor: 'pointer',
+      display: 'inline'
+  },
+  node: {
+      cursor: 'pointer',
+      display: 'inline',
+      color: 'black'
+  },
+  icon: {
+      width: '1em',
+      height: '1em',
+      marginLeft: 5,
+      cursor: 'cursor',
+  },
+  selected: {
+      color: 'green'
+  }
+}
 
 class DynamicTree extends React.Component {
   constructor(props) {
@@ -18,8 +38,8 @@ class DynamicTree extends React.Component {
   render() { 
     return ( 
       <div>
-    <TreeComponent key="dynamicTree" id="1" nodeData={this.props.data} content={this.props.title} open
-      treeNodeClick={this.handleTreeNodeClick} isActive={this.state.selected} />
+    <TreeComponent key="dynamicTree" id={this.props.id} nodeData={this.props.data} content={this.props.title} open
+      treeNodeClick={this.handleTreeNodeClick} isActive={this.state.selected} styles={styles} />
   </div>
      );
   }
