@@ -33,6 +33,9 @@ class DynamicTree extends React.Component {
 
   handleTreeNodeClick = e => {
     this.setState({ selected: e})
+    if(this.props.onClick){
+      this.props.onClick(e)
+    }
 }
 
   render() { 

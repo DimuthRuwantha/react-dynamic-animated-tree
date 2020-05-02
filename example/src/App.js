@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DynamicTree  from 'react-dynamic-animated-tree'
 
 var data = [{
@@ -40,7 +40,14 @@ var data = [{
 
 
 const App = () => {
-  return <DynamicTree key="root" id="root" data={[...data]} title="Dynamic Tree" />
+  const [count, setCount] = useState(null);
+  return (
+  <div>
+    <h2>count: {count ? count.title: null}</h2>
+    <DynamicTree key="root" id="root" data={[...data]} title="Dynamic Tree" onClick={(count)=> setCount(count)} />
+  </div>
+  
+  )
 }
 
 export default App
