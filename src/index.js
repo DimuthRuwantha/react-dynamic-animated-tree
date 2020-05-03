@@ -18,7 +18,7 @@ const styles = {
       cursor: 'cursor',
   },
   selected: {
-      color: 'green'
+      color: 'blue'
   }
 }
 
