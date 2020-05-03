@@ -40,11 +40,11 @@ var data = [{
 
 
 const App = () => {
-  const [count, setCount] = useState(null);
+  const [node, setSelectedNode] = useState("");
   return (
   <div>
-    <h2>count: {count ? count.title: null}</h2>
-    <DynamicTree key="root" id="root" data={[...data]} title="Dynamic Tree" onClick={(count)=> setCount(count)} />
+    <p>selected Node: {JSON.stringify({node:node.title, id: node.id})}</p>
+    <DynamicTree key="root" id="root" data={[...data]} title="Dynamic Tree" onClick={(node)=> setSelectedNode(node)} />
   </div>
   
   )
