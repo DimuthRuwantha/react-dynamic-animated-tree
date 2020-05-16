@@ -2,3 +2,4 @@ dist/
 node_modules/
 example/build/asset-manifest.json
 example/build/
+.vscode/
