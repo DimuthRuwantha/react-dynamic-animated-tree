@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-import  TreeComponent  from './TreeComponent'
+import TreeComponent  from './TreeComponent'
 
 const styles = {
   leaf: {
@@ -22,11 +22,6 @@ const styles = {
   selected: {
       color: 'blue'
   }
-}
-DynamicTree.PropTypes = {
-  title: PropTypes.string,
-  id: PropTypes.string,
-  data: PropTypes.array
 }
 
 class DynamicTree extends React.Component {
@@ -54,4 +49,10 @@ class DynamicTree extends React.Component {
   }
 }
  
+DynamicTree.propTypes = {
+  title: PropTypes.string,
+  id: PropTypes.string,
+  data: PropTypes.array
+}
+
 export default DynamicTree;

@@ -49,6 +49,7 @@
     "react-scripts": "^3.4.1"
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react-animated-tree": "^1.0.10"
   },
   "files": [

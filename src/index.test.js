@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import DynamicTree from '.'
 
-describe('ExampleComponent', () => {
+describe('DynamicTree', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(DynamicTree).toBeTruthy()
   })
 })

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import DynamicTree  from 'react-dynamic-animated-tree'
+import DynamicTree from 'react-dynamic-animated-tree'
 
 var data = [{
   "title": "Sri Lanka",

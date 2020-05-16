@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Tree from 'react-animated-tree'
-
 
 
 class TreeComponent extends Component {
@@ -15,8 +15,7 @@ class TreeComponent extends Component {
     }
    
     render() {
-        
-        return !this.props.nodeData.length ? null : (
+            return !this.props.nodeData.length ? null : (
             <div style={{ textAlign: 'left' }}>
                 <Tree key={this.props.key} open={this.props.open} 
                     content={
@@ -59,5 +58,11 @@ class TreeComponent extends Component {
         );
     }
 }
+
+TreeComponent.propTypes = {
+    content: PropTypes.string,
+    id: PropTypes.string,
+    nodeData: PropTypes.array
+  }
  
 export default TreeComponent;
