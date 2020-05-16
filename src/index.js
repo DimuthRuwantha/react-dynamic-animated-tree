@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+
 import  TreeComponent  from './TreeComponent'
 
 const styles = {
@@ -21,13 +23,17 @@ const styles = {
       color: 'blue'
   }
 }
+DynamicTree.PropTypes = {
+  title: PropTypes.string,
+  id: PropTypes.string,
+  data: PropTypes.array
+}
 
 class DynamicTree extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      selected: null
-     }
+    this.state = {
+      selected: null}
      this.handleTreeNodeClick = this.handleTreeNodeClick.bind(this)
   }
 
