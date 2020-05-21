@@ -15,12 +15,11 @@ class TreeComponent extends Component {
     }
    
     render() {
-            return !this.props.nodeData.length ? null : (
-            <div style={{ textAlign: 'left' }}>
-                <Tree key={this.props.key} open={this.props.open} 
+            return this.props.nodeData.length < 0 ? null : (<div style={{ textAlign: 'left' }}>
+                <Tree key={this.props.id} open={this.props.open} 
                     content={
                         <div style={{ ...this.props.styles.node }}>
-                            <span key={this.props.key} value={this.props.key} className="treeNode"
+                            <span key={this.props.id} value={this.props.content} className="treeNode"
                                 style={( this.props.isActive && this.props.id == this.props.isActive.id) ? this.props.styles.selected : { color: 'black'} }
                                 onClick={ this.props.treeNodeClick ?
                                     () => this.props.treeNodeClick({ 
