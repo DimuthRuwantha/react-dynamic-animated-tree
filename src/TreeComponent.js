@@ -15,12 +15,14 @@ class TreeComponent extends Component {
     }
    
     render() {
+        console.log(this.props.style);
+        
             return this.props.nodeData.length < 0 ? null : (<div style={{ textAlign: 'left' }}>
                 <Tree key={this.props.id} open={this.props.open} 
                     content={
-                        <div style={{ ...this.props.styles.node }}>
+                        <div style={{ ...this.props.style.node }}>
                             <span key={this.props.id} value={this.props.content} className="treeNode"
-                                style={( this.props.isActive && this.props.id == this.props.isActive.id) ? this.props.styles.selected : { color: 'black'} }
+                                style={( this.props.isActive && this.props.id == this.props.isActive.id) ? this.props.style.selected : this.props.style.node }
                                 onClick={ this.props.treeNodeClick ?
                                     () => this.props.treeNodeClick({ 
                                         id: this.props.id,
@@ -34,9 +36,9 @@ class TreeComponent extends Component {
                         !currentNode.childNodes.length > 0 ?
                             <Tree key={currentNode.id} 
                                 content={
-                                    <div style={{ ...this.props.styles.node }}>
+                                    <div style={{ ...this.props.style.node }}>
                                         <span key={currentNode.id} 
-                                            style={( this.props.isActive && currentNode.id == this.props.isActive.id) ? this.props.styles.selected : null }
+                                            style={( this.props.isActive && currentNode.id == this.props.isActive.id) ? this.props.style.selected : null }
                                             value={currentNode.id} className="treeNode" 
                                             onClick={this.props.treeNodeClick ? () => this.props.treeNodeClick(currentNode) : null }>{currentNode.title}</span>
                                     </div>
@@ -49,7 +51,7 @@ class TreeComponent extends Component {
                                 content={currentNode.title}
                                 treeNodeClick={this.props.treeNodeClick}
                                 open={false}
-                                styles={this.props.styles}></TreeComponent>
+                                style={this.props.style}></TreeComponent>
                     )
                     )}
                 </Tree>

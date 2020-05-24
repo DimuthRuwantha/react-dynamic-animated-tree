@@ -21,6 +21,9 @@ const styles = {
   },
   selected: {
       color: 'blue'
+  },
+  background: {
+    background: 'red'
   }
 }
 
@@ -40,10 +43,12 @@ class DynamicTree extends React.Component {
 }
 
   render() { 
+    const { id, data, title, style } = this.props
+    
     return ( 
-      <div>
-    <TreeComponent key="dynamicTree" id={this.props.id} nodeData={this.props.data} content={this.props.title} open
-      treeNodeClick={this.handleTreeNodeClick} isActive={this.state.selected} styles={styles} />
+      <div style={ style.background ? style.background : styles.background }>
+    <TreeComponent key="dynamicTree" id={id} nodeData={data} content={title} open
+      treeNodeClick={this.handleTreeNodeClick} isActive={this.state.selected} style={{ ...styles, ...style }} />
   </div>
      );
   }
